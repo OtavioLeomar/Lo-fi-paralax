@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: rgb(204, 0, 34);
+    --secondary-color: rgb(27, 22, 19);
+    --paragraph-font-color: rgb(189, 187, 187);
+    --white-color: #fff;
+    --black-color: #000;
+    --Transparent-color: rgba(0, 0, 0, 0.5);
+    --Transparent-color-light: rgba(0, 0, 0, 0.3);
+    --Transparent-color-heavy: rgba(0, 0, 0, 0.8);
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: rgb(27, 22, 19);
+    width: 100vw;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.parallex {
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    transform-style: inherit;
+    padding: 2vh 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.parallex .parallex3::before,
+.parallex .parallex1::before,
+.parallex .parallex2::before {
+    background: 50% 50% / contain;
+}
+
+.parallex3::before,
+.parallex1::before,
+.parallex2::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    display: block;
+    background-image: url(midias/LoFi15.gif);
+    background-size: cover;
+    background-attachment: scroll;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+
+}
+
+.parallex2::before {
+    background-image: url(midias/LoFi1.gif);
+}
+
+.parallex3::before {
+    background-image: url(midias/LoFi2.gif);
+}
+
+.Sobre {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 100px 30vw 50px 15vw;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+.Sobre h1,
+.Sobre p {
+    width: 100%;
+    display: block;
+    color: var(--white-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.Sobre p {
+    font-size: 0.85em;
+    text-justify: distribute-all-lines;
+    line-height: 2.5;
+    margin: 100px 0px 0px 15px;
+    text-align: justify;
+}
+
+.Sobre2 {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 100px 30vw 50px 15vw;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+.Sobre2 h2,
+.Sobre2 p {
+    width: 100%;
+    display: block;
+    color: var(--white-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.videos {
+    margin-top: 100px;
+    margin-left: -140px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+}
+
+
+.main-content {
+    position: fixed;
+    border: 10px solid var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh 5vw;
+    max-width: 90vw;
+
+}
+
+.main-content p {
+    color: var(--white-color);
+    font-size: 0.7em;
+    letter-spacing: 0.55em;
+    margin: 10px 0px 0px 15px;
+}
+
+h1 {
+    width: 100%;
+    color: var(--white-color);
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    line-height: 2;
+    text-align: center;
+    opacity: 0.8;
+}
+
+small {
+    font-size: 1.5rem;
+}
